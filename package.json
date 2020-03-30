@@ -1,15 +1,14 @@
 {
-  "name": "pino-colada",
-  "version": "2.0.0",
-  "description": "cute ndjson logger for pino",
+  "name": "pino-colada-graphql",
+  "version": "1.0.0",
+  "description": "cute ndjson logger for pino and apollo-server",
   "license": "MIT",
   "contributors": [
-    "Irina Shestak <shestak.irina@gmail.com",
-    "Yoshua Wuyts <yoshuawuyts@gmail.com"
+    "Daniel Sousa <sousa.dfs@gmail.com>"
   ],
-  "repository": "lrlna/pino-colada",
+  "repository": "danielfsousa/pino-colada-graphql",
   "bin": {
-    "pino-colada": "./bin.js"
+    "pino-colada-graphql": "./bin.js"
   },
   "main": "index.js",
   "scripts": {
@@ -19,22 +18,17 @@
   "keywords": [
     "ndjson",
     "logger",
-    "pretty-printer"
+    "pretty-printer",
+    "pino"
   ],
   "devDependencies": {
-    "@hapi/hapi": "^18.0.0",
-    "hapi-pino": "^6.3.0",
-    "merry": "^4.0.0",
-    "pino-http": "^4.3.0",
-    "standard": "^14.0.0"
+    "standard": "^14.3.3"
   },
   "dependencies": {
     "chalk": "^3.0.0",
-    "fast-json-parse": "^1.0.2",
-    "pad-left": "^2.1.0",
-    "pad-right": "^0.2.2",
-    "prettier-bytes": "^1.0.3",
-    "pretty-ms": "^5.0.0",
-    "split2": "^3.0.0"
+    "fast-json-parse": "^1.0.3",
+    "prettier-bytes": "^1.0.4",
+    "pretty-ms": "^6.0.1",
+    "split2": "^3.1.1"
   }
 }

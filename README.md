@@ -1,55 +1,35 @@
-# pino-colada 🍹
-[![npm version][1]][2] [![build status][3]][4]
-[![downloads][5]][6] [![js-standard-style][7]][8]
+# pino-colada-graphql 🍹
 
-A cute [ndjson](http://ndjson.org) formatter for [pino](https://github.com/pinojs/pino). 
+(WIP) A fork of [pino-colada](https://github.com/lrlna/pino-colada) to include graphql logging.
 
-![pino-colada](./pino-colada.png)
+![pino-colada-graphql](https://user-images.githubusercontent.com/11372312/77870829-cea62d00-7218-11ea-953b-bdac3093c5ef.png)
 
-# Usage
-Pipe a server that uses pino into pino-colada for logging.
+## Install
+This project is not yet finished. It will be available to install with npm:
 
 ```bash
-node server.js | pino-colada
+npm install pino-colada-graphql
 ```
 
-## pino-colada
-After parsing input from `server.js`, pino-colada returns a stream and pipes it
-over to `process.stdout`. It will output a timestamp, a log level in a form of
-an emoji, and a message.
+## Usage
 
-# Programmatic integration as [pino prettifier](http://getpino.io/#/docs/pretty?id=api-example)
+#### Piping
 
+It's recommended to use `pino-colada-graphql` with pino by piping your server output to it:
+
+```bash
+node server.js | pino-colada-graphql
+```
+
+#### Programatically
 ```javascript
 const pino = require('pino')
 const logger = pino({
-  prettifier: require('pino-colada')
+  prettifier: require('pino-colada-graphql')
 })
 
 logger.info('hi')
 ```
 
-# Install
-```bash
-npm install pino-colada
-```
-
-# Related content
-- [pino](https://github.com/pinojs/pino)
-- [merry](https://github.com/shipharbor/merry)
-- [garnish](https://github.com/mattdesl/garnish)
-- [@studio/log](https://github.com/javascript-studio/studio-log)
-- [pino-http](https://github.com/pinojs/pino-http)
-- [hapi-pino](https://github.com/pinojs/hapi-pino)
-
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
-
-[1]: https://img.shields.io/npm/v/pino-colada.svg?style=flat-square
-[2]: https://npmjs.org/package/pino-colada
-[3]: https://img.shields.io/travis/lrlna/pino-colada/master.svg?style=flat-square
-[4]: https://travis-ci.org/lrlna/pino-colada
-[5]: http://img.shields.io/npm/dm/pino-colada.svg?style=flat-square
-[6]: https://npmjs.org/package/pino-colada
-[7]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[8]: https://github.com/feross/standard

@@ -1,9 +1,9 @@
 #! /usr/bin/env node
-var split = require('split2')
-var pinoColada = require('./')()
-var input = process.stdin
-var output = process.stdout
+const split = require('split2')
+const pinoColadaGraphql = require('./')()
+const input = process.stdin
+const output = process.stdout
 
 input
-  .pipe(split(pinoColada))
+  .pipe(split(pinoColadaGraphql))
   .pipe(output)
